@@ -8,6 +8,6 @@ import { Image } from './../../dataModel/image';
   `
 })
 
-export class imageChild {
+export class ImageChild {
   @Input() image: Image;
 };

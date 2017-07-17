@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { getProductService } from './product.service';
-import { Product } from './product';
+import { Product } from '../../dataModel/product';
 
 @Component({
   selector:'list-items',
-  templateUrl: './index.html',
-  styleUrls: ['./index.css'],
+  templateUrl: './view.html',
+  styleUrls: ['./style.css'],
   providers: [getProductService],
 })
 
-export class ItemComponent implements OnInit{
+export class ProductsListComponent implements OnInit{
   products: Product[];
 
   constructor(private getProductService: getProductService) { };
@@ -17,7 +17,10 @@ export class ItemComponent implements OnInit{
   getProducts() : void {
     this.getProductService
       .fetchProductFromEndPoint()
-      .then(products => this.products = products);
+      .then(products => {
+        console.log(products);
+        this.products = products['products'];
+      });
   }
 
   ngOnInit() : void {

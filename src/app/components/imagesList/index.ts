@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import { Image } from './../../dataModel/Image';
 @Component({
   selector: 'images-list',
   templateUrl: './view.html',
@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ImagesList {
-  @Input() imageList : ImagesList;
+  @Input() images : Array<Image>;
 }
