@@ -1,0 +1,11 @@
+<ul class="pokemon-list">
+  <li *ngFor="let product of products" id="{{product.id}}">
+    <ul class="image-list">
+      <img src="{{product.image}}" />
+    </ul>
+    <image-list images={{product.images}}></image-list>
+    <span>Name: </span><span>{{product.title}}</span>
+    <span></span>
+    <a href="#" class="">read more</a>
+  </li>
+</ul>

@@ -1,0 +1,7 @@
+.pokemon-list{
+  list-style: none;
+}
+.pokemon-list li{
+  font-family: Tahoma;
+  font-size: 13px;
+}
