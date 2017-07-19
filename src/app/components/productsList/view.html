@@ -4,5 +4,9 @@
     <span>Name: </span><span>{{product.title}}</span>
     <span></span>
     <a href="#" class="">read more</a>
+    <div class="tags">
+      <tags-list [tags]="product.tags"></tags-list>
+    </div>
+    <add-to-cart [product]="product"></add-to-cart>
   </li>
 </ul>

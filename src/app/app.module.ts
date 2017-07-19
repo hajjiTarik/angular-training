@@ -5,14 +5,19 @@ import { HttpModule }    from '@angular/http';
 import { AppComponent } from './root/app.component';
 import { ProductsListComponent } from './components/productsList';
 import { getProductService } from './components/productsList/product.service';
-import { ImagesList } from './components/imagesList';
-import { ImageChild } from './components/imageChild';
+import { ImagesListComponent } from './components/imagesList';
+import { ImageChildComponent } from './components/imageChild';
+import { AddToCartComponent } from './components/addToCart';
+import { TagsListComponent } from './components/tagsList';
+
 @NgModule({
   declarations: [
     AppComponent,
     ProductsListComponent,
-    ImagesList,
-    ImageChild,
+    ImagesListComponent,
+    ImageChildComponent,
+    AddToCartComponent,
+    TagsListComponent,
   ],
   imports: [
     BrowserModule,

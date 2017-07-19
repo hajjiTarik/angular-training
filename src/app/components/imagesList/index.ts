@@ -7,6 +7,6 @@ import { Image } from './../../dataModel/Image';
   providers: [],
 })
 
-export class ImagesList {
+export class ImagesListComponent {
   @Input() images : Array<Image>;
 }
