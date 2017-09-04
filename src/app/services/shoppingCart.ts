@@ -1,6 +1,7 @@
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { Product } from '../dataModel/product';
 
+import 'rxjs/operator/toPromise';
 
 export class ShoppingCart {
   constructor (private http: Http) {}
@@ -8,6 +9,6 @@ export class ShoppingCart {
     return this.http
         .post('shopingCart/api', product)
         .toPromise()
-        .then((response)=> response as Product);
+        .then(response => response as Product);
   }
 }
